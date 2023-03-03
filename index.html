@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/header.css">
+  <!-- <link rel="stylesheet" href="css/teste.css"> -->
+  <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <title>UM JARDIM</title>
+
+  <head>
+
+  <body>
+    <header>
+
+      <section id="header">
+        <img src="fotos/logo1.png" class="logo" alt="">
+        <input type="search" class="pesquisa" placeholder="Pesquise no site">
+        <div id="login">
+          <div class="dropdown">
+            <img onclick="myFunction()" class="dropbtn" src="fotos/login.png" alt="" id="img-login" class="logo">
+            <div id="myDropdown" class="dropdown-content">
+              <form action="">
+                <input type="email" id="inputName" placeholder="Insira seu email">
+                <input type="password" id="inputSenha" placeholder="Insira sua senha"> <br>
+                <button value="submit" id="buttonEntrar">Entrar :)</button>
+              </form>
+              ou
+              <a href="login.html">Faça Seu Cadastro :)</a>
+            </div>
+          </div>
+          <script src="botao.js"></script>
+
+      </section>
+
+      <section class="menu-nav">
+        <div class="menu-item">Categoria</div>
+        <div class="menu-item">Categoria</div>
+        <div class="menu-item">Categoria</div>
+        <div class="menu-item">Categoria</div>
+      </section>
+    </header>
+    <nav>
+      <div class="slideshow-container">
+
+        <div class="mySlides fade">
+          <div class="numbertext">1 / 4</div>
+          <img src="fotos/promoção.jpg" style="width:100%; height: 500px;">
+
+        </div>
+
+        <div class="mySlides fade">
+          <div class="numbertext">2 / 4</div>
+          <img src="fotos/promoção.jpg" style="width:100%; height: 500px;">
+
+        </div>
+
+        <div class="mySlides fade">
+          <div class="numbertext">3 / 4</div>
+          <img src="fotos/promoção.jpg" style="width:100%; height: 500px;">
+
+        </div>
+
+        <div class="mySlides fade">
+          <div class="numbertext">4 / 4</div>
+          <img src="fotos/promoção.jpg" style="width:100%; height: 500px;">
+
+        </div>
+
+        <a class="prev" onclick="plusSlides(-1)">❮</a>
+        <a class="next" onclick="plusSlides(1)">❯</a>
+
+      </div>
+      <br>
+
+      <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+          showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+          showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+          let i;
+          let slides = document.getElementsByClassName("mySlides");
+          let dots = document.getElementsByClassName("dot");
+          if (n > slides.length) { slideIndex = 1 }
+          if (n < 1) { slideIndex = slides.length }
+          for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+          }
+          for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[slideIndex - 1].style.display = "block";
+          dots[slideIndex - 1].className += " active";
+        }
+      </script>
+
+      <section class="bolinhas-home">
+        <img src="fotos/pa.png" class="bolinhas" id="pa">
+        <img src="fotos/poltrona.png" class="bolinhas" id="poltrona">
+        <img src="fotos/guardasol.png" class="bolinhas" id="sol">
+        <img src="fotos/ferramentas.png" class="bolinhas" id="ferramentas">
+        <img src="fotos/mesa.png" class="bolinhas" id="mesa">
+      </section>
+    </nav>
+    <section class="mostruario">
+      <img src="fotos/teste.jpeg" alt="" class="amostras">
+      <img src="fotos/teste.jpeg" alt="" class="amostras">
+      <img src="fotos/teste.jpeg" alt="" class="amostras">
+    </section>
+
+    <footer class="rodapé">
+      <div class="icons">
+        <p>Siga A UM JARDIM:</p>
+        <img src="https://cdn3.iconfinder.com/data/icons/feather-5/24/power-512.png" width="30px" class="img">
+        <img src="https://cdn3.iconfinder.com/data/icons/feather-5/24/user-check-512.png" width="31px" class="img">
+        <img src="https://cdn3.iconfinder.com/data/icons/feather-5/24/wifi-512.png" width="31px" class="img">
+      </div>
+      <div id="dentro">
+        <div class="contatos">
+          <p>(11) 4002-8922</p>
+          <img src="https://cdn3.iconfinder.com/data/icons/feather-5/24/phone-512.png" width="35px" class="img">
+        </div>
+        <div class="direitos">
+          <p class="text-muted mb-0 py-2">©2022 UM JARDIM - Todos Os Direitos São Reservados.</p>
+        </div>
+      </div>
+      </div>
+    </footer>
+  </body>
+
+</html>

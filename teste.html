@@ -1,116 +1,161 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="reset.css">
-    <link rel="stylesheet" href="teste.css">
-    <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/teste.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/footer.css">
     <title>UM JARDIM</title>
-</head>
-<body>
-    <header>
-        <section class="header">
-            <div id="logo"><h1>UM JARDIM</h1></div>
 
-            <div class="pesquisa">
-                <img src="lupa.png" id="lupa">
-                <input type="search" id="pesquisa" placeholder="pesquise no site">
-            </div>
+    <head>
+
+    <body>
+        <header>
+
+            <section id="header">
+                <img src="fotos/logo1.png" class="logo" alt="">
 
 
-            <div id="login"><img src="login.png" id="login"></div>
-        </section>
-      
-    </header>
-    <nav>
-        <div class="slideshow-container">
+                <input type="search" class="pesquisa" placeholder="Pesquise no site">
 
-            <div class="mySlides fade">
-              <div class="numbertext">1 / 4</div>
-              <img src="promoção.jpg" style="width:100%; height: 500px;">
-              
-            </div>
-            
-            <div class="mySlides fade">
-              <div class="numbertext">2 / 4</div>
-              <img src="promoção.jpg" style="width:100%; height: 500px;">
-              
-            </div>
-            
-            <div class="mySlides fade">
-              <div class="numbertext">3 / 4</div>
-              <img src="promoção.jpg" style="width:100%; height: 500px;">
-              
-            </div>
-            
-            <div class="mySlides fade">
-                <div class="numbertext">4 / 4</div>
-                <img src="promoção.jpg" style="width:100%; height: 500px;">
-                
-              </div>
-            
-            <a class="prev" onclick="plusSlides(-1)">❮</a>
-            <a class="next" onclick="plusSlides(1)">❯</a>
-            
+
+                <div id="login">
+                    <div class="dropdown">
+                        <img onclick="myFunction()" class="dropbtn" src="fotos/login.png" alt="" id="img-login"
+                            class="login">
+                        <div id="myDropdown" class="dropdown-content">
+                            <form action="">
+                                <input type="email" id="inputName" placeholder="Insira seu email">
+                                <input type="password" id="inputSenha" placeholder="Insira sua senha"> <br>
+                                <button value="submit" id="buttonEntrar">Entrar :)</button>
+                            </form>
+                            ou
+                            <a href="login.html">Faça Seu Cadastro :)</a>
+                        </div>
+                    </div>
+                    <script src="botao.js"></script>
+
+            </section>
+
+            <section class="menu-nav">
+                <div class="menuDeNavegação">
+                    <div class="menu-item">Categoria</div>
+                    <div class="menu-item">Categoria</div>
+                    <div class="menu-item">Categoria</div>
+                    <div class="menu-item">Categoria</div>
+                </div>
+                    
+                <section class="sidebar-all">
+                    <div id="mySidepanel" class="sidepanel">
+                        <img src="fotos/login2.png" class="login2" alt="">
+                        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                        <form action="">
+                            <table>
+                                <input type="email" placeholder="Insira seu email" class="input-sidebar">
+                                <input type="password" placeholder="Insira sua senha" class="input-sidebar">
+                                <button value="submit" class="button-sidebar">Entrar :)</button>
+                            </table>
+                        </form>
+                        <button id="cadastro-sidebar">
+                            <a href="login.html">Cadastre-se</a>
+                        </button>
+                    </div>
+                    <div>
+                        <button class="openbtn" onclick="openNav()">&#9776; </button>
+                    </div>
+                    <script src="botao.js"></script>
+                </section>
+            </section>
+        </header>
+        <nav>
+            <div class="slideshow-container">
+
+                <div class="mySlides fade">
+                    <div class="numbertext">1 / 4</div>
+                    <img src="fotos/promoção.jpg" style="width:100%; height: 500px;">
+
+                </div>
+
+                <div class="mySlides fade">
+                    <div class="numbertext">2 / 4</div>
+                    <img src="fotos/promoção.jpg" style="width:100%; height: 500px;">
+
+                </div>
+
+                <div class="mySlides fade">
+                    <div class="numbertext">3 / 4</div>
+                    <img src="fotos/promoção.jpg" style="width:100%; height: 500px;">
+
+                </div>
+
+                <div class="mySlides fade">
+                    <div class="numbertext">4 / 4</div>
+                    <img src="fotos/promoção.jpg" style="width:100%; height: 500px;">
+
+                </div>
+
+                <a class="prev" onclick="plusSlides(-1)">❮</a>
+                <a class="next" onclick="plusSlides(1)">❯</a>
+
             </div>
             <br>
 
             <script>
-            let slideIndex = 1;
-            showSlides(slideIndex);
-            
-            function plusSlides(n) {
-              showSlides(slideIndex += n);
-            }
-            
-            function currentSlide(n) {
-              showSlides(slideIndex = n);
-            }
-            
-            function showSlides(n) {
-              let i;
-              let slides = document.getElementsByClassName("mySlides");
-              let dots = document.getElementsByClassName("dot");
-              if (n > slides.length) {slideIndex = 1}    
-              if (n < 1) {slideIndex = slides.length}
-              for (i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none";  
-              }
-              for (i = 0; i < dots.length; i++) {
-                dots[i].className = dots[i].className.replace(" active", "");
-              }
-              slides[slideIndex-1].style.display = "block";  
-              dots[slideIndex-1].className += " active";
-            }
+                let slideIndex = 1;
+                showSlides(slideIndex);
+
+                function plusSlides(n) {
+                    showSlides(slideIndex += n);
+                }
+
+                function currentSlide(n) {
+                    showSlides(slideIndex = n);
+                }
+
+                function showSlides(n) {
+                    let i;
+                    let slides = document.getElementsByClassName("mySlides");
+                    let dots = document.getElementsByClassName("dot");
+                    if (n > slides.length) { slideIndex = 1 }
+                    if (n < 1) { slideIndex = slides.length }
+                    for (i = 0; i < slides.length; i++) {
+                        slides[i].style.display = "none";
+                    }
+                    for (i = 0; i < dots.length; i++) {
+                        dots[i].className = dots[i].className.replace(" active", "");
+                    }
+                    slides[slideIndex - 1].style.display = "block";
+                    dots[slideIndex - 1].className += " active";
+                }
             </script>
 
-            <section class="section">
-                      <img src="pa.png" id="pa" >  
-                      <img src="poltrona.png" class="bolinhas" id="poltrona">
-                      <img src="guardasol.png" class="bolinhas" id="sol">
-                      <img src="ferramentas.png" class="bolinhas" id="ferramentas">
-                      <img src="mesa.png"class="bolinhas" id="mesa">
-            </section>      
-    </nav>
-    <footer class="rodapé">
-<br>
-        <div class="icons">
-        <p>Siga A UM JARDIM:</p>
-        <img src="https://cdn3.iconfinder.com/data/icons/feather-5/24/power-512.png" width="30px" class="img">
-        <img src="https://cdn3.iconfinder.com/data/icons/feather-5/24/user-check-512.png" width="31px" class="img">
-        <img src="https://cdn3.iconfinder.com/data/icons/feather-5/24/wifi-512.png" width="31px" class="img">
-        </div>
-        <div id="dentro">
-        <div class="contatos"><p>(11) 4002-8922</p>
-          <img src="https://cdn3.iconfinder.com/data/icons/feather-5/24/phone-512.png" width="35px" class="img">
-        </div>
-            <div class="direitos">
-              <p class="text-muted mb-0 py-2">©2022 UM JARDIM - Todos Os Direitos São Reservados.</p>
+            <section class="bolinhas-home">
+                <img src="fotos/pa.png" class="bolinhas" id="pa">
+                <img src="fotos/poltrona.png" class="bolinhas" id="poltrona">
+                <img src="fotos/guardasol.png" class="bolinhas" id="sol">
+                <img src="fotos/ferramentas.png" class="bolinhas" id="ferramentas">
+                <img src="fotos/mesa.png" class="bolinhas" id="mesa">
+            </section>
+        </nav>
+        <section class="mostruario">
+            <img src="fotos/teste.jpeg" alt="" class="amostras">
+            <img src="fotos/teste.jpeg" alt="" class="amostras">
+            <img src="fotos/teste.jpeg" alt="" class="amostras">
+        </section>
+
+        <footer class="rodapé">
+            <p class="footer-txt">Siga a UM JARDIM</p>
+            <div class="all-icons">
+              <img src="https://cdn3.iconfinder.com/data/icons/free-social-icons/67/instagram_circle_gray-256.png" class="icon">
+              <img src="https://cdn3.iconfinder.com/data/icons/free-social-icons/67/twitter_circle_gray-256.png" class="icon">
+              <img src="https://cdn3.iconfinder.com/data/icons/free-social-icons/67/facebook_circle_gray-256.png"
+                class="icon">
             </div>
-          </div>
-        </div>
-      </footer>
-</body>
+          </footer>
+    </body>
+
 </html>

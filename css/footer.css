@@ -1,0 +1,17 @@
+.rodapé {
+    margin: 0%;
+    bottom: 0;
+    background-color: #839b83;
+    padding-block: 40px;
+}
+.footer-txt {
+    text-align: center;
+    color: #c6c5bf;
+}
+.icon {
+    width: 30px;
+}
+.all-icons {
+    text-align: center;
+    margin-top: 5px;
+}
