@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/categorias.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <title>Document</title>
+</head>
+<header>
+
+    <section id="header">
+        <img src="fotos/logo.png" class="logo" alt="">
+
+
+        <input type="search" class="pesquisa" placeholder="Pesquise no site">
+
+
+        <div id="login">
+            <div class="dropdown">
+                <img onclick="myFunction()" class="dropbtn" src="fotos/login.png" alt="" id="img-login"
+                    class="login">
+                <div id="myDropdown" class="dropdown-content">
+                    <form action="">
+                        <input type="email" id="inputName" placeholder="Insira seu email">
+                        <input type="password" id="inputSenha" placeholder="Insira sua senha"> <br>
+                        <button value="submit" id="buttonEntrar">Entrar :)</button>
+                    </form>
+                    ou
+                    <a href="login.html">Faça Seu Cadastro :)</a>
+                </div>
+            </div>
+            <script src="botao.js"></script>
+
+    </section>
+
+    <section class="menu-nav">
+        <div class="menuDeNavegação">
+            <div class="menu-item">Categoria</div>
+            <div class="menu-item">Categoria</div>
+            <div class="menu-item">Categoria</div>
+            <div class="menu-item">Categoria</div>
+        </div>
+            
+        <section class="sidebar-all">
+            <div id="mySidepanel" class="sidepanel">
+                <img src="fotos/login.png" class="login2" alt="">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <form action="">
+                    <table>
+                        <input type="email" placeholder="Insira seu email" class="input-sidebar">
+                        <input type="password" placeholder="Insira sua senha" class="input-sidebar">
+                        <button value="submit" class="button-sidebar">Entrar :)</button>
+                    </table>
+                </form>
+                <button id="cadastro-sidebar">
+                    <a href="login.html">Cadastre-se</a>
+                </button>
+            </div>
+            <div>
+                <button class="openbtn" onclick="openNav()">&#9776; </button>
+            </div>
+            <script src="botao.js"></script>
+        </section>
+    </section>
+</header>
+<body>
+    <header>
+        <section id="sec_aprod">
+            <div class="prod">
+                <img src="pi fotos/Bolsa de Ferramentas.png" alt="" class="img_prod">
+                <p class="title_prod"> Bolsa Para Ferramentas<p>
+                <p class="value_prod">R$: XX,XX</p>
+                <img src="pi fotos/avs.png" class="avs_prod">
+                <p class="id_prod">ID: 0000000</p>
+            </div>
+            <div class="prod">
+                <img src="pi fotos/Caixa de Ferramentas.png" alt="" class="img_prod">
+                <p class="title_prod"> Caixa de Ferramentas<p>
+                <p class="value_prod">R$: XX,XX</p>
+                <img src="pi fotos/avs.png" class="avs_prod">
+                <p class="id_prod">ID: 0000000</p>
+            </div>
+            <div class="prod">
+                <img src="pi fotos/Kit de Jardinagem.png" alt="" class="img_prod">
+                <p class="title_prod"> Kit de Jardinagem <p>
+                <p class="value_prod">R$: XX,XX</p>
+                <img src="pi fotos/avs.png" class="avs_prod">
+                <p class="id_prod">ID: 0000000</p>
+            </div>
+            <div class="prod">
+                <img src="pi fotos/Pá de Jardinagem.png" alt="" class="img_prod">
+                <p class="title_prod"> Pá de Jardinagem<p>
+                <p class="value_prod">R$: XX,XX</p>
+                <img src="pi fotos/avs.png" class="avs_prod">
+                <p class="id_prod">ID: 0000000</p>
+            </div>
+            <div class="prod">
+                <img src="pi fotos/Pá Grande.png" alt="" class="img_prod">
+                <p class="title_prod"> Pá de Jardinagem Bungas<p>
+                <p class="value_prod">R$: XX,XX</p>
+                <img src="pi fotos/avs.png" class="avs_prod">
+                <p class="id_prod">ID: 0000000</p>
+            </div>
+            <div class="prod">
+                <img src="pi fotos/Tesoura.png" alt="" class="img_prod">
+                <p class="title_prod"> Tesoura de Poda<p>
+                <p class="value_prod">R$: XX,XX</p>
+                <img src="pi fotos/avs.png" class="avs_prod">
+                <p class="id_prod">ID: 0000000</p>
+            </div>
+        </section>
+        <footer class="rodapé">
+            <p class="footer-txt">Siga a UM JARDIM</p>
+            <div class="all-icons">
+                <img src="https://cdn3.iconfinder.com/data/icons/free-social-icons/67/instagram_circle_gray-256.png"
+                    class="icon">
+                <img src="https://cdn3.iconfinder.com/data/icons/free-social-icons/67/twitter_circle_gray-256.png"
+                    class="icon">
+                <img src="https://cdn3.iconfinder.com/data/icons/free-social-icons/67/facebook_circle_gray-256.png"
+                    class="icon">
+            </div>
+        </footer>
+</body>
+</html>

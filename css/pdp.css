@@ -258,12 +258,19 @@ input[type=number]::-webkit-inner-spin-button
 }
 
 .relacionados-pdp {
+  /* background-color: lightgrey; */
   width: 100%;
+  border-color :grey;
   bottom: 0;
   text-align: center;
   display: block;
-  margin-bottom: 150px;
-  margin-top: 20px;
+  display: flex;
+  margin: 50px 0;
+}
+
+.amostras{
+  margin: auto;
+  width: 15%;
 }
 
 @media only screen and (max-width:361px) {

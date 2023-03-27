@@ -2,142 +2,222 @@
 <html lang="pt-br">
 
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/reset.css">
-  <link rel="stylesheet" href="css/header.css">
-  <!-- <link rel="stylesheet" href="css/teste.css"> -->
-  <link rel="stylesheet" href="css/index.css">
-  <link rel="stylesheet" href="css/footer.css">
-  <title>UM JARDIM</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <title>UM JARDIM</title>
 
-  <head>
+    <head>
 
-  <body>
-    <header>
+    <body>
+        <header>
+            <!-- Header Versão Desktop -->
+            <section id="header">
+                <img src="fotos/logo.png" class="logo" alt="">
 
-      <section id="header">
-        <img src="fotos/logo1.png" class="logo" alt="">
-        <input type="search" class="pesquisa" placeholder="Pesquise no site">
-        <div id="login">
-          <div class="dropdown">
-            <img onclick="myFunction()" class="dropbtn" src="fotos/login.png" alt="" id="img-login" class="logo">
-            <div id="myDropdown" class="dropdown-content">
-              <form action="">
-                <input type="email" id="inputName" placeholder="Insira seu email">
-                <input type="password" id="inputSenha" placeholder="Insira sua senha"> <br>
-                <button value="submit" id="buttonEntrar">Entrar :)</button>
-              </form>
-              ou
-              <a href="login.html">Faça Seu Cadastro :)</a>
+
+                <input type="search" class="pesquisa" placeholder="Pesquise no site">
+
+
+                <div id="login">
+                    <div class="dropdown">
+                        <img onclick="myFunction()" class="dropbtn" src="fotos/login.png" alt="" id="img-login"
+                            class="login">
+                        <div id="myDropdown" class="dropdown-content">
+                            <form action="">
+                                <input type="email" id="inputName" placeholder="Insira seu email">
+                                <input type="password" id="inputSenha" placeholder="Insira sua senha"> <br>
+                                <button value="submit" id="buttonEntrar">Entrar :)</button>
+                            </form>
+                            ou
+                            <a href="login.html">Faça Seu Cadastro :)</a>
+                        </div>
+                    </div>
+                    <script src="botao.js"></script>
+            </section>
+
+            <!-- Menu de Navegação -->
+            <section class="menu-nav">
+                <!-- Menu de Navegação Versão Mobile -->
+                <div class="menuDeNavegação">
+                    <div class="menu-item">Categoria</div>
+                    <div class="menu-item">Categoria</div>
+                    <div class="menu-item">Categoria</div>
+                    <div class="menu-item">Categoria</div>
+                    <!-- <div class="menu-item">Categoria</div> -->
+                </div>
+                <!-- Barra Lateral Versão Mobile -->
+                <section class="sidebar-all">
+                    <div id="mySidepanel" class="sidepanel">
+                        <img src="fotos/login2.png" class="login2" alt="">
+                        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                        <form action="">
+                            <table>
+                                <input type="email" placeholder="Insira seu email" class="input-sidebar">
+                                <input type="password" placeholder="Insira sua senha" class="input-sidebar">
+                                <button value="submit" class="button-sidebar">Entrar :)</button>
+                            </table>
+                        </form>
+                        <button id="cadastro-sidebar">
+                            <a href="login.html">Cadastre-se</a>
+                        </button>
+                    </div>
+                    <div>
+                        <button class="openbtn" onclick="openNav()">&#9776; </button>
+                    </div>
+                    <script>
+                        function myFunction() {
+                            document.getElementById("myDropdown").classList.toggle("show");
+                        }
+                        // Close the dropdown menu if the user clicks outside of it
+                        window.onclick = function (event) {
+                            if (!event.target.matches('.dropbtn')) {
+                                var dropdowns = document.getElementsByClassName("dropdown-content");
+                                var i;
+                                for (i = 0; i < dropdowns.length; i++) {
+                                    var openDropdown = dropdowns[i];
+                                    if (openDropdown.classList.contains('show')) {
+                                        // openDropdown.classList.remove('show');
+                                    }
+                                }
+                            }
+                        }
+
+
+                        // sidebar
+                        function openNav() {
+                            document.getElementById("mySidepanel").style.width = "100%";
+                        }
+
+                        /* Set the width of the sidebar to 0 (hide it) */
+                        function closeNav() {
+                            document.getElementById("mySidepanel").style.width = "0";
+                        }
+                    </script>
+                </section>
+                <script src="header.js"></script>
+            </section>
+            <!--L=360 A=325-->
+        </header>
+
+        <nav>
+            <div class="slideshow-container">
+
+                <div class="mySlides fade">
+                    <div class="numbertext">1 / 4</div>
+                    <img src="fotos/50_ OFF.png" class="desktop" style="width:100%; height: 325px;">
+                    <img src="fotos/bannerMenor1.png" class="mobile" alt="">
+
+                </div>
+
+                <div class="mySlides fade">
+                    <div class="numbertext">2 / 4</div>
+                    <img src="fotos/banner2.png" class="desktop" style="width:100%; height: 325px;">
+                    <img src="fotos/bannerMenor1.png" class="mobile" alt="">
+
+                </div>
+
+                <div class="mySlides fade">
+                    <div class="numbertext">3 / 4</div>
+                    <img src="fotos/banner3.png" class="desktop" style="width:100%; height: 325px;">
+                    <img src="fotos/bannerMenor1.png" class="mobile" alt="">
+
+                </div>
+
+                <div class="mySlides fade">
+                    <div class="numbertext">4 / 4</div>
+                    <img src="fotos/banner4.png" class="desktop" style="width:100%; height: 325px;">
+                    <img src="fotos/bannerMenor1.png" class="mobile" alt="">
+
+                </div>
+
+                <a class="prev" onclick="plusSlides(-1)">❮</a>
+                <a class="next" onclick="plusSlides(1)">❯</a>
+
+                <div style="text-align:center">
+                    <span class="dot"></span> 
+                    <span class="dot"></span> 
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                  </div>
+                <script src="carrosel.js"></script>
             </div>
-          </div>
-          <script src="botao.js"></script>
 
-      </section>
 
-      <section class="menu-nav">
-        <div class="menu-item">Categoria</div>
-        <div class="menu-item">Categoria</div>
-        <div class="menu-item">Categoria</div>
-        <div class="menu-item">Categoria</div>
-      </section>
-    </header>
-    <nav>
-      <div class="slideshow-container">
 
-        <div class="mySlides fade">
-          <div class="numbertext">1 / 4</div>
-          <img src="fotos/promoção.jpg" style="width:100%; height: 500px;">
+            <!-- Bolinhas Versão Desktop -->
+            <section class="bolinhas-home">
+                <div class="bolinha-tamanho">
+                    <img src="fotos/pa.png" class="bolinhas" id="pa">
+                    <p>Plantas</p>
+                </div>
+                <div class="bolinha-tamanho">
+                    <img src="fotos/poltrona.png" class="bolinhas" id="poltrona">
+                    <p>Móveis para Jardim</p>
+                </div>
+                <div class="bolinha-tamanho">
+                    <img src="fotos/guardasol.png" class="bolinhas" id="sol">
+                    <p>Piscina</p>
+                </div>
+                <div class="bolinha-tamanho">
+                    <img src="fotos/ferramentas.png" class="bolinhas" id="ferramentas">
+                    <p>Ferrmantas</p>
+                </div>
+                <div class="bolinha-tamanho">
+                    <img src="fotos/mesa.png" class="bolinhas" id="mesa">
+                    <p>Cozinha Externa</p>
+                </div>
+            </section>
 
-        </div>
+            <img src="fotos/le.png" alt="" id="escrita">
 
-        <div class="mySlides fade">
-          <div class="numbertext">2 / 4</div>
-          <img src="fotos/promoção.jpg" style="width:100%; height: 500px;">
 
-        </div>
+            <!-- Bolinhas Versão Mobile             -->
+            <section class="r-bolinhas">
+                <div class="r-bolinhaDiv">
+                    <img src="fotos/guardasol.png" alt="" class="r-bolinhaItem">
+                    <!-- <p>Plantas</p> -->
+                </div>
+                <div class="r-bolinhaDiv">
+                    <img src="fotos/guardasol.png" alt="" class="r-bolinhaItem">
+                    <!-- <p>Plantas</p> -->
+                    <div class="r-bolinhaDiv">
+                        <img src="fotos/guardasol.png" alt="" class="r-bolinhaItem">
+                        <!-- <p>Plantas</p> -->
+                    </div>
+                    <div class="r-bolinhaDiv">
+                        <img src="fotos/guardasol.png" alt="" class="r-bolinhaItem">
+                        <!-- <p>Plantas</p> -->
+                    </div>
+                    <div class="r-bolinhaDiv">
+                        <img src="fotos/guardasol.png" alt="" class="r-bolinhaItem">
+                        <!-- <p>Plantas</p> -->
+                    </div>
 
-        <div class="mySlides fade">
-          <div class="numbertext">3 / 4</div>
-          <img src="fotos/promoção.jpg" style="width:100%; height: 500px;">
+            </section>
 
-        </div>
+            <section class="mostruario">
+                <img src="fotos/cardhome1.png" alt="" class="amostras">
+                <img src="fotos/cardhome2.png" alt="" class="amostras">
+                <img src="fotos/cardhome3.png" alt="" class="amostras">
+            </section>
 
-        <div class="mySlides fade">
-          <div class="numbertext">4 / 4</div>
-          <img src="fotos/promoção.jpg" style="width:100%; height: 500px;">
-
-        </div>
-
-        <a class="prev" onclick="plusSlides(-1)">❮</a>
-        <a class="next" onclick="plusSlides(1)">❯</a>
-
-      </div>
-      <br>
-
-      <script>
-        let slideIndex = 1;
-        showSlides(slideIndex);
-
-        function plusSlides(n) {
-          showSlides(slideIndex += n);
-        }
-
-        function currentSlide(n) {
-          showSlides(slideIndex = n);
-        }
-
-        function showSlides(n) {
-          let i;
-          let slides = document.getElementsByClassName("mySlides");
-          let dots = document.getElementsByClassName("dot");
-          if (n > slides.length) { slideIndex = 1 }
-          if (n < 1) { slideIndex = slides.length }
-          for (i = 0; i < slides.length; i++) {
-            slides[i].style.display = "none";
-          }
-          for (i = 0; i < dots.length; i++) {
-            dots[i].className = dots[i].className.replace(" active", "");
-          }
-          slides[slideIndex - 1].style.display = "block";
-          dots[slideIndex - 1].className += " active";
-        }
-      </script>
-
-      <section class="bolinhas-home">
-        <img src="fotos/pa.png" class="bolinhas" id="pa">
-        <img src="fotos/poltrona.png" class="bolinhas" id="poltrona">
-        <img src="fotos/guardasol.png" class="bolinhas" id="sol">
-        <img src="fotos/ferramentas.png" class="bolinhas" id="ferramentas">
-        <img src="fotos/mesa.png" class="bolinhas" id="mesa">
-      </section>
-    </nav>
-    <section class="mostruario">
-      <img src="fotos/teste.jpeg" alt="" class="amostras">
-      <img src="fotos/teste.jpeg" alt="" class="amostras">
-      <img src="fotos/teste.jpeg" alt="" class="amostras">
-    </section>
-
-    <footer class="rodapé">
-      <div class="icons">
-        <p>Siga A UM JARDIM:</p>
-        <img src="https://cdn3.iconfinder.com/data/icons/feather-5/24/power-512.png" width="30px" class="img">
-        <img src="https://cdn3.iconfinder.com/data/icons/feather-5/24/user-check-512.png" width="31px" class="img">
-        <img src="https://cdn3.iconfinder.com/data/icons/feather-5/24/wifi-512.png" width="31px" class="img">
-      </div>
-      <div id="dentro">
-        <div class="contatos">
-          <p>(11) 4002-8922</p>
-          <img src="https://cdn3.iconfinder.com/data/icons/feather-5/24/phone-512.png" width="35px" class="img">
-        </div>
-        <div class="direitos">
-          <p class="text-muted mb-0 py-2">©2022 UM JARDIM - Todos Os Direitos São Reservados.</p>
-        </div>
-      </div>
-      </div>
-    </footer>
-  </body>
+        </nav>
+        <footer class="rodapé">
+            <p class="footer-txt">Siga a UM JARDIM</p>
+            <div class="all-icons">
+                <img src="https://cdn3.iconfinder.com/data/icons/free-social-icons/67/instagram_circle_gray-256.png"
+                    class="icon">
+                <img src="https://cdn3.iconfinder.com/data/icons/free-social-icons/67/twitter_circle_gray-256.png"
+                    class="icon">
+                <img src="https://cdn3.iconfinder.com/data/icons/free-social-icons/67/facebook_circle_gray-256.png"
+                    class="icon">
+            </div>
+        </footer>
+    </body>
 
 </html>

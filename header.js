@@ -1,7 +1,3 @@
-// dropdown-login
-
-/* When the user clicks on the button,
-toggle between hiding and showing the dropdown content */
 function myFunction() {
     document.getElementById("myDropdown").classList.toggle("show");
 }
@@ -29,26 +25,3 @@ function openNav() {
 function closeNav() {
     document.getElementById("mySidepanel").style.width = "0";
 }
-// botão de quantidade da pdp
-
-var num = document.querySelector("#numero");
-var mais = document.querySelector("#mais");
-var menos = document.querySelector("#menos");
-
-num = 0;
-
-function less() {
-    num--;
-    setValue(num);
-}
-
-function more() {
-    num++;
-    setValue(num);
-}
-
-function setValue(value) {
-    document.getElementById('numero').value = value;
-}
-
-setValue(num);
