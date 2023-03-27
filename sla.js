@@ -1,8 +1,8 @@
-function openNav() {
-    document.getElementById("mySidepanel").style.width = "250px";
-  }
-  
-  /* Set the width of the sidebar to 0 (hide it) */
-  function closeNav() {
-    document.getElementById("mySidepanel").style.width = "0";
-  }
+var num1 =parseInt(window.prompt("Insira o primeiro número"));
+var num2 =parseInt(window.prompt("Insira o segundo número"));
+
+var soma = num1+num2;
+
+console.log(num1);
+
+window.alert(soma);

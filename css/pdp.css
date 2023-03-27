@@ -265,3 +265,13 @@ input[type=number]::-webkit-inner-spin-button
   margin-bottom: 150px;
   margin-top: 20px;
 }
+
+@media only screen and (max-width:361px) {
+
+  .carousel-pdp{
+    display: none;
+  }
+  .informações-pdp{
+    display: none;
+  }
+}
